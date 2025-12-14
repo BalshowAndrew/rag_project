@@ -1,15 +1,15 @@
 import time
 import textwrap
 
+from config import settings
 import openai
 from openai import OpenAI
 
-from config import API_KEY
 
 # openai.api_key = API_KEY
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=API_KEY)
+    api_key=settings.api_key)
 
 gptmodel = "tngtech/tng-r1t-chimera:free"
 start_time = time.time()
